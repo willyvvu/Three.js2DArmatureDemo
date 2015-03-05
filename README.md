@@ -6,11 +6,13 @@ Specifically, this workflow tests to see if Three.js and Blender can be used to 
 
 ## About the demo
 
-It works! Use the arrow keys to move.
+[Try in now](http://willy-vvu.github.io/DankMemesDemo/Step%204/) in the browser! Use the arrow keys to move. If you're faced with a black screen, things are loading. Just hang tight.
 
-Two things I hoped to get working but decided not to:
-1. Flapping wings. The Three.js exporter I used doesn't export changes in scale.
-2. Wind animation. The Three.js animation system does not support multiple additive animations from playing at once.
+A few things I hoped to get working but decided not to:
+
+1. Clean animations. During the walking and landing animation, there is some strange scaling and moving that occurs. I'm not sure what's causing this, but oh well.
+2. Flapping wings. The Three.js exporter I used doesn't export changes in scale.
+3. Wind animation. The Three.js animation system does not support multiple additive animations playing at once.
 
 ## Step 1 - Art
 
@@ -53,4 +55,4 @@ You'll need to know how to:
 - Blend between animations using animation weights
 - Create transparent materials with textures *- make sure to check the normals and sort faces from Step 3, or else the faces may not show up!*
 
- And, that's it! Go make some awesome interactives with art.
+And, that's it! Go make some awesome interactives with art.
