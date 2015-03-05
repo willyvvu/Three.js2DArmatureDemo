@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="2048"
+   height="2048"
+   id="svg3029"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="Backdrop Packed 2.svg"
+   inkscape:export-filename="C:\Users\William\Documents\2014-2015\NotPixi\Step 2\Backdrop Packed 2.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs3031" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.24748737"
+     inkscape:cx="970.49676"
+     inkscape:cy="1001.4882"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="842"
+     inkscape:window-height="796"
+     inkscape:window-x="104"
+     inkscape:window-y="19"
+     inkscape:window-maximized="0"
+     inkscape:snap-bbox="true"
+     inkscape:snap-page="true" />
+  <metadata
+     id="metadata3034">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,995.63782)">
+    <image
+       y="-995.63782"
+       x="0"
+       id="image3045"
+       xlink:href="file:///C:/Users/William/Documents/2014-2015/NotPixi/Step%202/Backdrop.png"
+       height="1152"
+       width="2048" />
+    <image
+       y="-840.87677"
+       x="0"
+       id="image3056"
+       xlink:href="file:///C:/Users/William/Documents/2014-2015/NotPixi/Step%202/Mountains.png"
+       height="1152"
+       width="2048" />
+    <image
+       y="-99.637817"
+       x="0"
+       id="image3067"
+       xlink:href="file:///C:/Users/William/Documents/2014-2015/NotPixi/Step%202/Color%20Swatch.png"
+       height="1152"
+       width="2048" />
+  </g>
+</svg>

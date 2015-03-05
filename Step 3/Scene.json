@@ -1,0 +1,286 @@
+{
+    "object": {
+        "type": "Scene",
+        "matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+        "uuid": "70D24D0F-2963-4F93-9FCA-5FC67699A10F",
+        "children": [{
+            "type": "Mesh",
+            "name": "Plane",
+            "uuid": "631279BD-3DB0-34E6-BE17-B19991DEF360",
+            "position": [0.0,0.0,0.0],
+            "rotation": [-1.570796,0.0,0.0],
+            "scale": [1.1142,1.1142,1.1142],
+            "visible": true,
+            "material": "109C8DEC-623D-3F38-8AFD-395BEC6741C8",
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "4FECB53D-A156-3618-8169-F793FA803615"
+        },{
+            "type": "Mesh",
+            "name": "Plane.001",
+            "uuid": "66205067-0F90-3828-854D-B862B8DDED90",
+            "position": [0.0,-0.295936,3.099362],
+            "rotation": [-0.0,0.0,0.0],
+            "scale": [0.993324,0.993324,0.993324],
+            "visible": true,
+            "material": "109C8DEC-623D-3F38-8AFD-395BEC6741C8",
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "1518AE6B-31CC-3AD5-9772-1F477CE9310C"
+        },{
+            "type": "Mesh",
+            "name": "Plane.002",
+            "uuid": "6A7EC587-8429-3F03-AAF8-BF7B39E6EE98",
+            "position": [0.0,0.283853,7.424695],
+            "rotation": [-0.0,0.0,0.0],
+            "scale": [0.805637,0.805637,0.805637],
+            "visible": true,
+            "material": "109C8DEC-623D-3F38-8AFD-395BEC6741C8",
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "0A15C5DE-41D7-37AC-B25A-ED8C37517BFF"
+        },{
+            "type": "Mesh",
+            "name": "Plane.003",
+            "uuid": "62177021-69FF-3757-B537-E9D5AC35413A",
+            "position": [0.0,-0.285137,-4.757161],
+            "rotation": [-0.0,0.0,0.0],
+            "scale": [1.070995,1.070994,1.070994],
+            "visible": true,
+            "material": "109C8DEC-623D-3F38-8AFD-395BEC6741C8",
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "83B2BD35-55D9-39EB-9825-68CE08EF01AA"
+        },{
+            "type": "Mesh",
+            "name": "Plane.004",
+            "uuid": "6B5BEBAA-F39D-310E-901D-0D1B32515804",
+            "position": [1.393778,-0.514934,-37.968632],
+            "rotation": [-1.570796,0.0,0.0],
+            "scale": [1.0,1.0,1.0],
+            "visible": true,
+            "material": "9D8A2545-F1EB-3251-B63F-BA16B4AD0604",
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "84AC040D-0828-38D3-A7F0-BE5467BA5E74"
+        },{
+            "type": "Mesh",
+            "name": "Plane.005",
+            "uuid": "BEC93D1B-227F-3964-892D-2C0A23D89C63",
+            "position": [0.0,12.659129,-10.488219],
+            "rotation": [-0.0,0.0,0.0],
+            "scale": [0.589669,0.589669,0.589669],
+            "visible": true,
+            "material": "9D8A2545-F1EB-3251-B63F-BA16B4AD0604",
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "E77F3D23-40DC-3FE1-AB53-E6DDFE9E9DC5"
+        },{
+            "type": "Mesh",
+            "name": "Plane.006",
+            "uuid": "EE5833F5-8D0F-369A-BD48-F00C2E32CD83",
+            "position": [1.957491,-3.104316,-32.507996],
+            "rotation": [-1.570796,0.0,0.0],
+            "scale": [1.0,1.0,1.0],
+            "visible": true,
+            "material": "9D8A2545-F1EB-3251-B63F-BA16B4AD0604",
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "B13F2B94-9F9B-3E44-BCD1-9A174C112E4A"
+        }]
+    },
+    "textures": [{
+        "name": "Tex",
+        "anisotropy": 1.0,
+        "image": "6B837A30-E377-38A2-A67C-923DB5ED3D2E",
+        "type": "Geometry",
+        "mapping": "UVMapping",
+        "magFilter": "LinearFilter",
+        "uuid": "F7F25B99-8709-3776-8D32-B0774203CF6B",
+        "wrap": ["RepeatWrapping","RepeatWrapping"],
+        "minFilter": "LinearMipMapLinearFilter",
+        "repeat": [1,1]
+    },{
+        "name": "Texture",
+        "anisotropy": 1.0,
+        "image": "E8188209-3A6C-34FC-9959-51A8CD54A797",
+        "type": "Geometry",
+        "mapping": "UVMapping",
+        "magFilter": "LinearFilter",
+        "uuid": "57C8C518-0CD0-3866-88FE-BBB14474EBD7",
+        "wrap": ["RepeatWrapping","RepeatWrapping"],
+        "minFilter": "LinearMipMapLinearFilter",
+        "repeat": [1,1]
+    }],
+    "materials": [{
+        "transparent": true,
+        "emissive": 0,
+        "name": "Material.001",
+        "map": "F7F25B99-8709-3776-8D32-B0774203CF6B",
+        "color": 13421772,
+        "depthWrite": true,
+        "vertexColors": false,
+        "depthTest": true,
+        "blending": "NormalBlending",
+        "type": "MeshLambertMaterial",
+        "ambient": 13421772,
+        "uuid": "109C8DEC-623D-3F38-8AFD-395BEC6741C8"
+    },{
+        "transparent": true,
+        "emissive": 0,
+        "name": "Material.002",
+        "map": "57C8C518-0CD0-3866-88FE-BBB14474EBD7",
+        "color": 13421772,
+        "depthWrite": true,
+        "vertexColors": false,
+        "depthTest": true,
+        "blending": "NormalBlending",
+        "type": "MeshLambertMaterial",
+        "ambient": 13421772,
+        "uuid": "9D8A2545-F1EB-3251-B63F-BA16B4AD0604"
+    }],
+    "metadata": {
+        "type": "Object",
+        "generator": "io_three",
+        "sourceFile": "Scene.blend",
+        "version": 4.3
+    },
+    "images": [{
+        "type": "Geometry",
+        "uuid": "6B837A30-E377-38A2-A67C-923DB5ED3D2E",
+        "name": "Backdrop Packed.png",
+        "url": "Backdrop Packed.png"
+    },{
+        "type": "Geometry",
+        "uuid": "E8188209-3A6C-34FC-9959-51A8CD54A797",
+        "name": "Backdrop Packed 2.png",
+        "url": "Backdrop Packed 2.png"
+    }],
+    "geometries": [{
+        "type": "Geometry",
+        "uuid": "0A15C5DE-41D7-37AC-B25A-ED8C37517BFF",
+        "data": {
+            "normals": [0.0,0.0,1.0],
+            "vertices": [-11.604959,-1.998522,0.0,11.604959,-1.998522,0.0,-11.604959,0.970212,-0.0,11.604959,0.970212,-0.0],
+            "name": "Plane.002Geometry.1",
+            "faces": [41,0,1,3,2,0,1,2,3,0,0,0,0],
+            "uvs": [[0.006262,0.004624,0.993553,0.004624,0.993553,0.112148,0.006262,0.112148]],
+            "metadata": {
+                "normals": 1,
+                "vertices": 4,
+                "faces": 1,
+                "generator": "io_three",
+                "uvs": 1,
+                "version": 3
+            }
+        }
+    },{
+        "type": "Geometry",
+        "uuid": "83B2BD35-55D9-39EB-9825-68CE08EF01AA",
+        "data": {
+            "normals": [0.0,0.0,1.0],
+            "vertices": [-14.203839,-2.446082,0.0,14.203839,-2.446082,0.0,-14.203839,2.446082,-0.0,14.203839,2.446082,-0.0],
+            "name": "Plane.003Geometry.1",
+            "faces": [41,0,1,3,2,0,1,2,3,0,0,0,0],
+            "uvs": [[0.006262,0.300979,0.993553,0.300979,0.993553,0.418918,0.006262,0.418918]],
+            "metadata": {
+                "normals": 1,
+                "vertices": 4,
+                "faces": 1,
+                "generator": "io_three",
+                "uvs": 1,
+                "version": 3
+            }
+        }
+    },{
+        "type": "Geometry",
+        "uuid": "4FECB53D-A156-3618-8169-F793FA803615",
+        "data": {
+            "normals": [0.0,-1.0,0.0],
+            "vertices": [-11.601342,-1e-06,-2.292268,11.601342,-1e-06,-2.292268,-11.601342,1e-06,10.476867,11.601342,1e-06,10.476867],
+            "name": "PlaneGeometry.1",
+            "faces": [41,0,1,3,2,0,1,2,3,0,0,0,0],
+            "uvs": [[0.00785,0.439463,0.994896,0.439463,0.994895,1.000627,0.00785,1.000627]],
+            "metadata": {
+                "normals": 1,
+                "vertices": 4,
+                "faces": 1,
+                "generator": "io_three",
+                "uvs": 1,
+                "version": 3
+            }
+        }
+    },{
+        "type": "Geometry",
+        "uuid": "1518AE6B-31CC-3AD5-9772-1F477CE9310C",
+        "data": {
+            "normals": [0.0,0.0,1.0],
+            "vertices": [-11.604959,-1.998522,0.0,11.604959,-1.998522,0.0,-11.604959,1.998522,-0.0,11.604959,1.998522,-0.0],
+            "name": "Plane.001Geometry.1",
+            "faces": [41,0,1,3,2,0,1,2,3,0,0,0,0],
+            "uvs": [[0.006262,0.150873,0.993553,0.150873,0.993553,0.30121,0.006262,0.30121]],
+            "metadata": {
+                "normals": 1,
+                "vertices": 4,
+                "faces": 1,
+                "generator": "io_three",
+                "uvs": 1,
+                "version": 3
+            }
+        }
+    },{
+        "type": "Geometry",
+        "uuid": "B13F2B94-9F9B-3E44-BCD1-9A174C112E4A",
+        "data": {
+            "normals": [0.0,-1.0,0.0],
+            "vertices": [16.256447,-1e-06,12.20236,-24.393192,-1e-06,12.20236,16.256447,-1e-06,2.624596,-24.393192,-1e-06,2.624596],
+            "name": "Plane.006Geometry.1",
+            "faces": [41,0,1,3,2,0,1,2,3,0,0,0,0],
+            "uvs": [[0.880576,0.756936,0.128733,0.756936,0.128733,0.579789,0.880576,0.579789]],
+            "metadata": {
+                "normals": 1,
+                "vertices": 4,
+                "faces": 1,
+                "generator": "io_three",
+                "uvs": 1,
+                "version": 3
+            }
+        }
+    },{
+        "type": "Geometry",
+        "uuid": "E77F3D23-40DC-3FE1-AB53-E6DDFE9E9DC5",
+        "data": {
+            "normals": [0.0,0.0,1.0],
+            "vertices": [-30.783928,-5.301384,0.0,30.783928,-5.301384,0.0,-30.783928,5.301384,-0.0,30.783928,5.301384,-0.0],
+            "name": "Plane.005Geometry.1",
+            "faces": [41,0,1,3,2,0,1,2,3,0,0,0,0],
+            "uvs": [[0.006262,0.820206,0.993553,0.820206,0.993553,0.99023,0.006262,0.99023]],
+            "metadata": {
+                "normals": 1,
+                "vertices": 4,
+                "faces": 1,
+                "generator": "io_three",
+                "uvs": 1,
+                "version": 3
+            }
+        }
+    },{
+        "type": "Geometry",
+        "uuid": "84AC040D-0828-38D3-A7F0-BE5467BA5E74",
+        "data": {
+            "normals": [0.0,-1.0,0.0],
+            "vertices": [59.653568,4e-06,42.915646,-59.653568,4e-06,42.915646,59.653568,-4e-06,-29.137905,-59.653568,-4e-06,-29.137905],
+            "name": "Plane.004Geometry.1",
+            "faces": [41,0,1,3,2,0,1,2,3,0,0,0,0],
+            "uvs": [[0.950904,0.54096,0.066454,0.54096,0.066454,0.006811,0.950904,0.006811]],
+            "metadata": {
+                "normals": 1,
+                "vertices": 4,
+                "faces": 1,
+                "generator": "io_three",
+                "uvs": 1,
+                "version": 3
+            }
+        }
+    }]
+}
