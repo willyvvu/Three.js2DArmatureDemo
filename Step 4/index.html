@@ -2,7 +2,8 @@
 <html>
   <head>
   </head>
-  <body style="margin:0;overflow:hidden">
+  <body style="margin:0;overflow:hidden;background-color:black;color:#555;font-size:32pt;">
+    <div id="loading">Loading...</div>
     <script src="three.js"></script>
     <script src="OrbitControls.js"></script>
     <script src="SceneLoader.js"></script>
@@ -12,7 +13,6 @@
       find = (array, name)->
         for obj in array when obj.name is name
           return obj
-      
       # Set things up
       renderer=new THREE.WebGLRenderer()
       renderer.setSize(window.innerWidth,window.innerHeight)
@@ -23,6 +23,7 @@
         window.scene = data
         loader = new THREE.JSONLoader()
         loader.load "../Step 3/Aurora.json", (geometry)->
+          document.getElementById("loading").style.display = "none"
           # All the loading is complete. The coding can begin.
           # Setup Aurora
           auroraTexture = THREE.ImageUtils.loadTexture("../Step 3/Aurora.png")
@@ -92,6 +93,7 @@
             dance: 0
           }
           handleKey = (keyCode, down)->
+            updateJoystick = true
             switch keyCode
               when 37 #Left
                 keyMap.left = down
@@ -103,14 +105,33 @@
                 keyMap.down = down
               when 192
                 keyMap.dance = down
-
+              else
+                updateJoystick = false
+            if updateJoystick
+              joystick.set(
+                keyMap.right - keyMap.left,
+                keyMap.up - keyMap.down, 0
+              )
           window.addEventListener "keydown", (event)->
             handleKey(event.keyCode, 1)
           window.addEventListener "keyup", (event)->
             handleKey(event.keyCode, 0)
 
-          do render = ()->
+          startTouchPosition = new THREE.Vector3()
+          window.addEventListener "touchstart", (event)->
+            startTouchPosition.set(event.targetTouches[0].pageX, event.targetTouches[0].pageY, 0)
+            joystick.set(0, 0, 0)
+          window.addEventListener "touchmove", (event)->
+            joystick.set(event.targetTouches[0].pageX, event.targetTouches[0].pageY, 0).sub(startTouchPosition)
+            length = joystick.length()
+            joystick.normalize().multiplyScalar(Math.min(length/50, 1))
+            joystick.y *= -1
+          window.addEventListener "touchend", (event)->
+            joystick.set(0, 0, 0)
 
+          time = 0
+          do render = ()->
+            time++
             # Normalize all the weights, blend between animations, and update the animaitons.
             wind.resetBlendWeights()
             animations[currentAnimation].weight = currentWeight = Math.min(1, animations[currentAnimation].weight + 0.05)
@@ -128,12 +149,21 @@
               animations[anim].update(if anim is currentAnimation then 1/60 else 0)
             wind.update(1/60)
             sdebug.update()
-
-            joystick.set(
-              keyMap.right - keyMap.left,
-              keyMap.up - keyMap.down, 0
-            )
             
+            # Wind without the animation...
+            scaledTime = time/30
+            find(aurora.skeleton.bones, "Hair 2").rotation.x = 0.05 + 0.05 * Math.sin(scaledTime)
+            find(aurora.skeleton.bones, "Hair 2.001").rotation.x = 0.2 * Math.sin(scaledTime - 1)
+            find(aurora.skeleton.bones, "Hair 2.002").rotation.x = 0.1 * Math.sin(scaledTime - 2)
+            find(aurora.skeleton.bones, "Hair 1").rotation.x = -0.05 + 0.05 * Math.sin(scaledTime - 1)
+            find(aurora.skeleton.bones, "Hair 1.001").rotation.x = 0.2 * Math.sin(scaledTime - 2)
+            find(aurora.skeleton.bones, "Hair 1.002").rotation.x = 0.1 * Math.sin(scaledTime - 3)
+            scaledTime = time/20
+            find(aurora.skeleton.bones, "Dress.002").position.z += 0.1 * Math.cos(scaledTime)
+            find(aurora.skeleton.bones, "Dress.003").position.z += 0.1 * Math.cos(scaledTime - 1)
+            find(aurora.skeleton.bones, "Dress.001").position.z += 0.1 * Math.cos(scaledTime - 2)
+            find(aurora.skeleton.bones, "Dress").position.z += 0.1 * Math.cos(scaledTime - 3)
+
             # Let's get physical
             lastTouchingGround = aurora.position.y < 0.01
             
@@ -151,7 +181,7 @@
                 landing = 10
               nextAnimation = if joystick.x is 0 then "idle" else "walk"
             else
-              if joystick.x isnt 0
+              if Math.abs(joystick.x) > Math.abs(joystick.y)
                 nextAnimation = "flyforwards"
               else
                 nextAnimation = if joystick.y > 0 then "flyupwards" else (if joystick.y < 0 then "fall" else "hover")
@@ -186,7 +216,6 @@
             camera.aspect = window.innerWidth/window.innerHeight
             camera.fov = 45 / Math.max(16/9, camera.aspect)
             camera.updateProjectionMatrix()
-      
 
     </script>
   </body>
