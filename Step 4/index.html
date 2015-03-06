@@ -1,8 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+      body {
+        margin:0;
+        padding:0;
+        overflow:hidden;
+        background-color:black;
+        color:#555;
+        font-size:32pt;
+      }
+      body, canvas {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
   </head>
-  <body style="margin:0;overflow:hidden;background-color:black;color:#555;font-size:32pt;">
+  <body>
     <div id="loading">Loading...</div>
     <script src="three.js"></script>
     <script src="OrbitControls.js"></script>
@@ -31,7 +51,7 @@
           aurora = new THREE.SkinnedMesh(geometry, new THREE.MeshBasicMaterial(side: THREE.DoubleSide, skinning: true, transparent: true, map: auroraTexture))
           aurora.rotation.y = -Math.PI/2
           #aurora.scale.x = 10
-          aurora.position.z = 0.1
+          aurora.position.z = 0.15
           wind = new THREE.Animation(aurora, find(aurora.geometry.animations,"Wind"))
           #wind.play()
 
@@ -48,6 +68,7 @@
             dance: new THREE.Animation(aurora, find(aurora.geometry.animations,"Dance - 132bpm"))
           }
           landing = 0
+          engageWings = 0
           animations[currentAnimation].play()
 
           scene.add(aurora)
@@ -59,7 +80,7 @@
           # Setup the camera
           aspect = window.innerWidth/window.innerHeight
           camera = new THREE.PerspectiveCamera(45 / Math.max(16/9, aspect),aspect,10,80)
-          camera.position.set(0, 4.5, 26.5)
+          camera.position.set(0, 3, 26.5)
           # window.addEventListener "mousemove", (event)->
           #   camera.position.set(
           #     3 * (event.pageX/window.innerWidth - 0.5),
@@ -71,14 +92,16 @@
 
           # Create and assign textures
           backdropTexture = THREE.ImageUtils.loadTexture("../Step 3/Backdrop Packed.png")
-          scene.children[0].material = 
-          scene.children[2].material = 
-          scene.children[1].material = 
-          scene.children[3].material = new THREE.MeshBasicMaterial(transparent: true, map: backdropTexture)
+
+          find(scene.children, "Plane").material = new THREE.MeshBasicMaterial(transparent: true, map: backdropTexture)
+          find(scene.children, "Plane.001").material =
+          find(scene.children, "Plane.002").material =
+          find(scene.children, "Plane.003").material = new THREE.MeshBasicMaterial(morphTargets: true, transparent: true, map: backdropTexture)
+          
           backdropTexture2 = THREE.ImageUtils.loadTexture("../Step 3/Backdrop Packed 2.png")
-          scene.children[4].material = 
-          scene.children[5].material = 
-          scene.children[6].material = new THREE.MeshBasicMaterial(transparent: true, map: backdropTexture2)
+          find(scene.children, "Plane.004").material = 
+          find(scene.children, "Plane.005").material = 
+          find(scene.children, "Plane.006").material = new THREE.MeshBasicMaterial(transparent: true, map: backdropTexture2)
 
           velocity = new THREE.Vector3()
           joystick = new THREE.Vector3()
@@ -121,11 +144,14 @@
           window.addEventListener "touchstart", (event)->
             startTouchPosition.set(event.targetTouches[0].pageX, event.targetTouches[0].pageY, 0)
             joystick.set(0, 0, 0)
+            document.body.webkitRequestFullScreen()
+            event.preventDefault()
           window.addEventListener "touchmove", (event)->
             joystick.set(event.targetTouches[0].pageX, event.targetTouches[0].pageY, 0).sub(startTouchPosition)
             length = joystick.length()
             joystick.normalize().multiplyScalar(Math.min(length/50, 1))
             joystick.y *= -1
+            event.preventDefault()
           window.addEventListener "touchend", (event)->
             joystick.set(0, 0, 0)
 
@@ -151,18 +177,29 @@
             sdebug.update()
             
             # Wind without the animation...
-            scaledTime = time/30
+            scaledTime = time / 30
             find(aurora.skeleton.bones, "Hair 2").rotation.x = 0.05 + 0.05 * Math.sin(scaledTime)
             find(aurora.skeleton.bones, "Hair 2.001").rotation.x = 0.2 * Math.sin(scaledTime - 1)
             find(aurora.skeleton.bones, "Hair 2.002").rotation.x = 0.1 * Math.sin(scaledTime - 2)
             find(aurora.skeleton.bones, "Hair 1").rotation.x = -0.05 + 0.05 * Math.sin(scaledTime - 1)
             find(aurora.skeleton.bones, "Hair 1.001").rotation.x = 0.2 * Math.sin(scaledTime - 2)
             find(aurora.skeleton.bones, "Hair 1.002").rotation.x = 0.1 * Math.sin(scaledTime - 3)
-            scaledTime = time/20
+
+            scaledTime = time / 20
             find(aurora.skeleton.bones, "Dress.002").position.z += 0.1 * Math.cos(scaledTime)
             find(aurora.skeleton.bones, "Dress.003").position.z += 0.1 * Math.cos(scaledTime - 1)
             find(aurora.skeleton.bones, "Dress.001").position.z += 0.1 * Math.cos(scaledTime - 2)
             find(aurora.skeleton.bones, "Dress").position.z += 0.1 * Math.cos(scaledTime - 3)
+
+            # Hax to fix hair behaving strangely during walk
+            find(aurora.skeleton.bones, "Hair 1").position.set(0,-0.09,0)
+            find(aurora.skeleton.bones, "Hair 2").position.set(0,0.07,0)
+
+            # Waving grass
+            scaledTime = time / 60
+            find(scene.children, "Plane.001").morphTargetInfluences[1] = Math.cos(scaledTime)
+            find(scene.children, "Plane.002").morphTargetInfluences[1] = Math.cos(0.7128 * scaledTime + 3)
+            find(scene.children, "Plane.003").morphTargetInfluences[1] = Math.cos(0.5342 * scaledTime + 1.5)
 
             # Let's get physical
             lastTouchingGround = aurora.position.y < 0.01
@@ -170,10 +207,25 @@
             targetVel = tempVector.copy(joystick).multiplyScalar(if lastTouchingGround then 0.15 else 0.25)
             velocity.lerp(targetVel, 0.1)
             aurora.position.add(velocity)
-            aurora.position.x = Math.min(Math.max(aurora.position.x, -14), 14)
-            aurora.position.y = Math.min(Math.max(aurora.position.y, 0), 12)
+            aurora.position.x = Math.min(Math.max(aurora.position.x, -11), 11)
+            aurora.position.y = Math.min(Math.max(aurora.position.y, 0), 9)
             
             touchingGround = aurora.position.y < 0.01
+
+            # Wings!
+            scaledTime = time/2
+            if touchingGround
+              engageWings = 0.9*engageWings
+            else
+              engageWings = 1 - 0.9*(1 - engageWings)
+            find(aurora.skeleton.bones, "Wing 1").scale.set(1, 1, 1).multiplyScalar(1 - engageWings + engageWings * (0.6 + 0.4 * Math.cos(scaledTime)))
+            find(aurora.skeleton.bones, "Wing 2").scale.set(1, 1, 1).multiplyScalar(1 - engageWings + engageWings * (0.6 + 0.4 * Math.cos(scaledTime)))
+
+            # Flight instability
+            scaledTime = time / 50
+            if not touchingGround
+              find(aurora.skeleton.bones, "Body").position.z += 0.1 * engageWings * Math.sin(scaledTime)
+              find(aurora.skeleton.bones, "Body").position.y += 0.1 * engageWings * Math.sin(scaledTime*3.141592)
 
             # Find the next animation to transition to
             if touchingGround
@@ -181,7 +233,7 @@
                 landing = 10
               nextAnimation = if joystick.x is 0 then "idle" else "walk"
             else
-              if Math.abs(joystick.x) > Math.abs(joystick.y)
+              if 0.01 < Math.abs(joystick.x) >= Math.abs(joystick.y)
                 nextAnimation = "flyforwards"
               else
                 nextAnimation = if joystick.y > 0 then "flyupwards" else (if joystick.y < 0 then "fall" else "hover")
@@ -193,7 +245,7 @@
               nextAnimation = "dance"
 
             if nextAnimation isnt currentAnimation
-              animations[nextAnimation].play(0, 0)
+              animations[nextAnimation].play(0, animations[nextAnimation].weight)
               currentAnimation = nextAnimation
 
             # Ability to turn around
@@ -205,9 +257,10 @@
                 aurora.scale.z = 1
 
             # Let the camera follow Aurora, and render!
-            camera.position.set(
+            tempVector.set(
               1.5 * Math.max(Math.min(aurora.position.x/10,1),-1),
               3.5 * Math.max(Math.min(aurora.position.y/8,1),0) + 3, 26.5)
+            camera.position.lerp(tempVector, 0.08)
             renderer.render(scene, camera)
             window.requestAnimationFrame(render)
 

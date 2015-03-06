@@ -1,8 +1,13 @@
 {
+    "textures": [],
+    "metadata": {
+        "type": "Object",
+        "sourceFile": "Scene.blend",
+        "generator": "io_three",
+        "version": 4.3
+    },
     "object": {
         "type": "Scene",
-        "matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
-        "uuid": "70D24D0F-2963-4F93-9FCA-5FC67699A10F",
         "children": [{
             "type": "Mesh",
             "name": "Plane",
@@ -14,31 +19,31 @@
             "material": "109C8DEC-623D-3F38-8AFD-395BEC6741C8",
             "castShadow": true,
             "receiveShadow": true,
-            "geometry": "4FECB53D-A156-3618-8169-F793FA803615"
+            "geometry": "B2D09458-738F-39FF-AFFE-CDBD386CDAFB"
         },{
             "type": "Mesh",
             "name": "Plane.001",
             "uuid": "66205067-0F90-3828-854D-B862B8DDED90",
-            "position": [0.0,-0.295936,3.099362],
+            "position": [0.0,-0.556737,3.099362],
             "rotation": [-0.0,0.0,0.0],
             "scale": [0.993324,0.993324,0.993324],
             "visible": true,
             "material": "109C8DEC-623D-3F38-8AFD-395BEC6741C8",
             "castShadow": true,
             "receiveShadow": true,
-            "geometry": "1518AE6B-31CC-3AD5-9772-1F477CE9310C"
+            "geometry": "CA5C8CC9-7174-3B1B-920A-EB0F87E8D193"
         },{
             "type": "Mesh",
             "name": "Plane.002",
             "uuid": "6A7EC587-8429-3F03-AAF8-BF7B39E6EE98",
-            "position": [0.0,0.283853,7.424695],
+            "position": [0.0,0.051813,7.424695],
             "rotation": [-0.0,0.0,0.0],
             "scale": [0.805637,0.805637,0.805637],
             "visible": true,
             "material": "109C8DEC-623D-3F38-8AFD-395BEC6741C8",
             "castShadow": true,
             "receiveShadow": true,
-            "geometry": "0A15C5DE-41D7-37AC-B25A-ED8C37517BFF"
+            "geometry": "4F6150AD-C167-30EC-AB27-D23EB2325A67"
         },{
             "type": "Mesh",
             "name": "Plane.003",
@@ -50,7 +55,7 @@
             "material": "109C8DEC-623D-3F38-8AFD-395BEC6741C8",
             "castShadow": true,
             "receiveShadow": true,
-            "geometry": "83B2BD35-55D9-39EB-9825-68CE08EF01AA"
+            "geometry": "4536F582-E3F9-3777-AE7B-0ACB35BCEC9D"
         },{
             "type": "Mesh",
             "name": "Plane.004",
@@ -62,7 +67,7 @@
             "material": "9D8A2545-F1EB-3251-B63F-BA16B4AD0604",
             "castShadow": true,
             "receiveShadow": true,
-            "geometry": "84AC040D-0828-38D3-A7F0-BE5467BA5E74"
+            "geometry": "F903D1A4-A4C8-36AB-B232-783532AF7183"
         },{
             "type": "Mesh",
             "name": "Plane.005",
@@ -74,7 +79,7 @@
             "material": "9D8A2545-F1EB-3251-B63F-BA16B4AD0604",
             "castShadow": true,
             "receiveShadow": true,
-            "geometry": "E77F3D23-40DC-3FE1-AB53-E6DDFE9E9DC5"
+            "geometry": "9B1AB62C-4B2C-315B-BCB3-A191838B968E"
         },{
             "type": "Mesh",
             "name": "Plane.006",
@@ -86,201 +91,192 @@
             "material": "9D8A2545-F1EB-3251-B63F-BA16B4AD0604",
             "castShadow": true,
             "receiveShadow": true,
-            "geometry": "B13F2B94-9F9B-3E44-BCD1-9A174C112E4A"
-        }]
+            "geometry": "A5AC6AB9-1C88-32AC-8260-AD26E34AE48E"
+        }],
+        "matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+        "uuid": "4EAA470D-73C4-4381-BBDF-F0E5D69C97D6"
     },
-    "textures": [{
-        "name": "Tex",
-        "anisotropy": 1.0,
-        "image": "6B837A30-E377-38A2-A67C-923DB5ED3D2E",
-        "type": "Geometry",
-        "mapping": "UVMapping",
-        "magFilter": "LinearFilter",
-        "uuid": "F7F25B99-8709-3776-8D32-B0774203CF6B",
-        "wrap": ["RepeatWrapping","RepeatWrapping"],
-        "minFilter": "LinearMipMapLinearFilter",
-        "repeat": [1,1]
-    },{
-        "name": "Texture",
-        "anisotropy": 1.0,
-        "image": "E8188209-3A6C-34FC-9959-51A8CD54A797",
-        "type": "Geometry",
-        "mapping": "UVMapping",
-        "magFilter": "LinearFilter",
-        "uuid": "57C8C518-0CD0-3866-88FE-BBB14474EBD7",
-        "wrap": ["RepeatWrapping","RepeatWrapping"],
-        "minFilter": "LinearMipMapLinearFilter",
-        "repeat": [1,1]
-    }],
-    "materials": [{
-        "transparent": true,
-        "emissive": 0,
-        "name": "Material.001",
-        "map": "F7F25B99-8709-3776-8D32-B0774203CF6B",
-        "color": 13421772,
-        "depthWrite": true,
-        "vertexColors": false,
-        "depthTest": true,
-        "blending": "NormalBlending",
-        "type": "MeshLambertMaterial",
-        "ambient": 13421772,
-        "uuid": "109C8DEC-623D-3F38-8AFD-395BEC6741C8"
-    },{
-        "transparent": true,
-        "emissive": 0,
-        "name": "Material.002",
-        "map": "57C8C518-0CD0-3866-88FE-BBB14474EBD7",
-        "color": 13421772,
-        "depthWrite": true,
-        "vertexColors": false,
-        "depthTest": true,
-        "blending": "NormalBlending",
-        "type": "MeshLambertMaterial",
-        "ambient": 13421772,
-        "uuid": "9D8A2545-F1EB-3251-B63F-BA16B4AD0604"
-    }],
-    "metadata": {
-        "type": "Object",
-        "generator": "io_three",
-        "sourceFile": "Scene.blend",
-        "version": 4.3
-    },
-    "images": [{
-        "type": "Geometry",
-        "uuid": "6B837A30-E377-38A2-A67C-923DB5ED3D2E",
-        "name": "Backdrop Packed.png",
-        "url": "Backdrop Packed.png"
-    },{
-        "type": "Geometry",
-        "uuid": "E8188209-3A6C-34FC-9959-51A8CD54A797",
-        "name": "Backdrop Packed 2.png",
-        "url": "Backdrop Packed 2.png"
-    }],
     "geometries": [{
         "type": "Geometry",
-        "uuid": "0A15C5DE-41D7-37AC-B25A-ED8C37517BFF",
         "data": {
+            "metadata": {
+                "generator": "io_three",
+                "version": 3,
+                "normals": 1,
+                "faces": 1,
+                "uvs": 1,
+                "vertices": 4,
+                "morphTargets": 0
+            },
+            "name": "Plane.005Geometry.285",
             "normals": [0.0,0.0,1.0],
-            "vertices": [-11.604959,-1.998522,0.0,11.604959,-1.998522,0.0,-11.604959,0.970212,-0.0,11.604959,0.970212,-0.0],
-            "name": "Plane.002Geometry.1",
-            "faces": [41,0,1,3,2,0,1,2,3,0,0,0,0],
-            "uvs": [[0.006262,0.004624,0.993553,0.004624,0.993553,0.112148,0.006262,0.112148]],
-            "metadata": {
-                "normals": 1,
-                "vertices": 4,
-                "faces": 1,
-                "generator": "io_three",
-                "uvs": 1,
-                "version": 3
-            }
-        }
-    },{
-        "type": "Geometry",
-        "uuid": "83B2BD35-55D9-39EB-9825-68CE08EF01AA",
-        "data": {
-            "normals": [0.0,0.0,1.0],
-            "vertices": [-14.203839,-2.446082,0.0,14.203839,-2.446082,0.0,-14.203839,2.446082,-0.0,14.203839,2.446082,-0.0],
-            "name": "Plane.003Geometry.1",
-            "faces": [41,0,1,3,2,0,1,2,3,0,0,0,0],
-            "uvs": [[0.006262,0.300979,0.993553,0.300979,0.993553,0.418918,0.006262,0.418918]],
-            "metadata": {
-                "normals": 1,
-                "vertices": 4,
-                "faces": 1,
-                "generator": "io_three",
-                "uvs": 1,
-                "version": 3
-            }
-        }
-    },{
-        "type": "Geometry",
-        "uuid": "4FECB53D-A156-3618-8169-F793FA803615",
-        "data": {
-            "normals": [0.0,-1.0,0.0],
-            "vertices": [-11.601342,-1e-06,-2.292268,11.601342,-1e-06,-2.292268,-11.601342,1e-06,10.476867,11.601342,1e-06,10.476867],
-            "name": "PlaneGeometry.1",
-            "faces": [41,0,1,3,2,0,1,2,3,0,0,0,0],
-            "uvs": [[0.00785,0.439463,0.994896,0.439463,0.994895,1.000627,0.00785,1.000627]],
-            "metadata": {
-                "normals": 1,
-                "vertices": 4,
-                "faces": 1,
-                "generator": "io_three",
-                "uvs": 1,
-                "version": 3
-            }
-        }
-    },{
-        "type": "Geometry",
-        "uuid": "1518AE6B-31CC-3AD5-9772-1F477CE9310C",
-        "data": {
-            "normals": [0.0,0.0,1.0],
-            "vertices": [-11.604959,-1.998522,0.0,11.604959,-1.998522,0.0,-11.604959,1.998522,-0.0,11.604959,1.998522,-0.0],
-            "name": "Plane.001Geometry.1",
-            "faces": [41,0,1,3,2,0,1,2,3,0,0,0,0],
-            "uvs": [[0.006262,0.150873,0.993553,0.150873,0.993553,0.30121,0.006262,0.30121]],
-            "metadata": {
-                "normals": 1,
-                "vertices": 4,
-                "faces": 1,
-                "generator": "io_three",
-                "uvs": 1,
-                "version": 3
-            }
-        }
-    },{
-        "type": "Geometry",
-        "uuid": "B13F2B94-9F9B-3E44-BCD1-9A174C112E4A",
-        "data": {
-            "normals": [0.0,-1.0,0.0],
-            "vertices": [16.256447,-1e-06,12.20236,-24.393192,-1e-06,12.20236,16.256447,-1e-06,2.624596,-24.393192,-1e-06,2.624596],
-            "name": "Plane.006Geometry.1",
-            "faces": [41,0,1,3,2,0,1,2,3,0,0,0,0],
-            "uvs": [[0.880576,0.756936,0.128733,0.756936,0.128733,0.579789,0.880576,0.579789]],
-            "metadata": {
-                "normals": 1,
-                "vertices": 4,
-                "faces": 1,
-                "generator": "io_three",
-                "uvs": 1,
-                "version": 3
-            }
-        }
-    },{
-        "type": "Geometry",
-        "uuid": "E77F3D23-40DC-3FE1-AB53-E6DDFE9E9DC5",
-        "data": {
-            "normals": [0.0,0.0,1.0],
-            "vertices": [-30.783928,-5.301384,0.0,30.783928,-5.301384,0.0,-30.783928,5.301384,-0.0,30.783928,5.301384,-0.0],
-            "name": "Plane.005Geometry.1",
-            "faces": [41,0,1,3,2,0,1,2,3,0,0,0,0],
+            "morphTargets": [],
             "uvs": [[0.006262,0.820206,0.993553,0.820206,0.993553,0.99023,0.006262,0.99023]],
-            "metadata": {
-                "normals": 1,
-                "vertices": 4,
-                "faces": 1,
-                "generator": "io_three",
-                "uvs": 1,
-                "version": 3
-            }
-        }
+            "vertices": [-30.783928,-5.301384,0.0,30.783928,-5.301384,0.0,-30.783928,5.301384,-0.0,30.783928,5.301384,-0.0],
+            "faces": [41,0,1,3,2,0,1,2,3,0,0,0,0]
+        },
+        "uuid": "9B1AB62C-4B2C-315B-BCB3-A191838B968E"
     },{
         "type": "Geometry",
-        "uuid": "84AC040D-0828-38D3-A7F0-BE5467BA5E74",
         "data": {
-            "normals": [0.0,-1.0,0.0],
-            "vertices": [59.653568,4e-06,42.915646,-59.653568,4e-06,42.915646,59.653568,-4e-06,-29.137905,-59.653568,-4e-06,-29.137905],
-            "name": "Plane.004Geometry.1",
-            "faces": [41,0,1,3,2,0,1,2,3,0,0,0,0],
-            "uvs": [[0.950904,0.54096,0.066454,0.54096,0.066454,0.006811,0.950904,0.006811]],
             "metadata": {
-                "normals": 1,
-                "vertices": 4,
-                "faces": 1,
                 "generator": "io_three",
+                "version": 3,
+                "normals": 1,
+                "faces": 1,
                 "uvs": 1,
-                "version": 3
-            }
-        }
+                "vertices": 4,
+                "morphTargets": 0
+            },
+            "name": "PlaneGeometry.285",
+            "normals": [0.0,-1.0,0.0],
+            "morphTargets": [],
+            "uvs": [[0.00785,0.439463,0.994896,0.439463,0.994895,1.000627,0.00785,1.000627]],
+            "vertices": [-11.601342,-1e-06,-2.292268,11.601342,-1e-06,-2.292268,-11.601342,1e-06,10.476867,11.601342,1e-06,10.476867],
+            "faces": [41,0,1,3,2,0,1,2,3,0,0,0,0]
+        },
+        "uuid": "B2D09458-738F-39FF-AFFE-CDBD386CDAFB"
+    },{
+        "type": "Geometry",
+        "data": {
+            "metadata": {
+                "generator": "io_three",
+                "version": 3,
+                "normals": 1,
+                "faces": 1,
+                "uvs": 1,
+                "vertices": 4,
+                "morphTargets": 0
+            },
+            "name": "Plane.006Geometry.285",
+            "normals": [0.0,-1.0,0.0],
+            "morphTargets": [],
+            "uvs": [[0.880576,0.756936,0.128733,0.756936,0.128733,0.579789,0.880576,0.579789]],
+            "vertices": [16.256447,-1e-06,12.20236,-24.393192,-1e-06,12.20236,16.256447,-1e-06,2.624596,-24.393192,-1e-06,2.624596],
+            "faces": [41,0,1,3,2,0,1,2,3,0,0,0,0]
+        },
+        "uuid": "A5AC6AB9-1C88-32AC-8260-AD26E34AE48E"
+    },{
+        "type": "Geometry",
+        "data": {
+            "metadata": {
+                "generator": "io_three",
+                "version": 3,
+                "normals": 1,
+                "faces": 1,
+                "uvs": 1,
+                "vertices": 4,
+                "morphTargets": 0
+            },
+            "name": "Plane.004Geometry.285",
+            "normals": [0.0,-1.0,0.0],
+            "morphTargets": [],
+            "uvs": [[0.950904,0.54096,0.066454,0.54096,0.066454,0.006811,0.950904,0.006811]],
+            "vertices": [59.653568,4e-06,42.915646,-59.653568,4e-06,42.915646,59.653568,-4e-06,-29.137905,-59.653568,-4e-06,-29.137905],
+            "faces": [41,0,1,3,2,0,1,2,3,0,0,0,0]
+        },
+        "uuid": "F903D1A4-A4C8-36AB-B232-783532AF7183"
+    },{
+        "type": "Geometry",
+        "data": {
+            "metadata": {
+                "generator": "io_three",
+                "version": 3,
+                "normals": 1,
+                "faces": 1,
+                "uvs": 1,
+                "vertices": 4,
+                "morphTargets": 2
+            },
+            "name": "Plane.002Geometry.285",
+            "normals": [0.0,0.0,1.0],
+            "morphTargets": [{
+                "vertices": [-11.604959,-1.998522,0.0,11.604959,-1.998522,0.0,-11.604959,0.970212,-0.0,11.604959,0.970212,-0.0],
+                "name": "animation_000000"
+            },{
+                "vertices": [-11.460949,-1.998522,0.0,11.748968,-1.998522,0.0,-11.092844,0.970212,-0.0,12.117073,0.970212,-0.0],
+                "name": "animation_000001"
+            }],
+            "uvs": [[0.006262,0.004624,0.993553,0.004624,0.993553,0.112148,0.006262,0.112148]],
+            "vertices": [-11.604959,-1.998522,0.0,11.604959,-1.998522,0.0,-11.604959,0.970212,-0.0,11.604959,0.970212,-0.0],
+            "faces": [41,0,1,3,2,0,1,2,3,0,0,0,0]
+        },
+        "uuid": "4F6150AD-C167-30EC-AB27-D23EB2325A67"
+    },{
+        "type": "Geometry",
+        "data": {
+            "metadata": {
+                "generator": "io_three",
+                "version": 3,
+                "normals": 1,
+                "faces": 1,
+                "uvs": 1,
+                "vertices": 4,
+                "morphTargets": 2
+            },
+            "name": "Plane.001Geometry.285",
+            "normals": [0.0,0.0,1.0],
+            "morphTargets": [{
+                "vertices": [-11.604959,-1.998522,0.0,11.604959,-1.998522,0.0,-11.604959,1.998522,-0.0,11.604959,1.998522,-0.0],
+                "name": "animation_000000"
+            },{
+                "vertices": [-11.581061,-1.998522,0.0,11.628856,-1.998522,0.0,-11.461647,1.998522,-0.0,11.74827,1.998522,-0.0],
+                "name": "animation_000001"
+            }],
+            "uvs": [[0.006262,0.150873,0.993553,0.150873,0.993553,0.30121,0.006262,0.30121]],
+            "vertices": [-11.604959,-1.998522,0.0,11.604959,-1.998522,0.0,-11.604959,1.998522,-0.0,11.604959,1.998522,-0.0],
+            "faces": [41,0,1,3,2,0,1,2,3,0,0,0,0]
+        },
+        "uuid": "CA5C8CC9-7174-3B1B-920A-EB0F87E8D193"
+    },{
+        "type": "Geometry",
+        "data": {
+            "metadata": {
+                "generator": "io_three",
+                "version": 3,
+                "normals": 1,
+                "faces": 1,
+                "uvs": 1,
+                "vertices": 4,
+                "morphTargets": 2
+            },
+            "name": "Plane.003Geometry.285",
+            "normals": [0.0,0.0,1.0],
+            "morphTargets": [{
+                "vertices": [-14.203839,-2.446082,0.0,14.203839,-2.446082,0.0,-14.203839,2.446082,-0.0,14.203839,2.446082,-0.0],
+                "name": "animation_000000"
+            },{
+                "vertices": [-14.322052,-2.446082,0.0,14.085627,-2.446082,0.0,-14.062153,2.446082,-0.0,14.345526,2.446082,-0.0],
+                "name": "animation_000001"
+            }],
+            "uvs": [[0.006262,0.300979,0.993553,0.300979,0.993553,0.418918,0.006262,0.418918]],
+            "vertices": [-14.203839,-2.446082,0.0,14.203839,-2.446082,0.0,-14.203839,2.446082,-0.0,14.203839,2.446082,-0.0],
+            "faces": [41,0,1,3,2,0,1,2,3,0,0,0,0]
+        },
+        "uuid": "4536F582-E3F9-3777-AE7B-0ACB35BCEC9D"
+    }],
+    "images": [],
+    "materials": [{
+        "color": 13421772,
+        "blending": "NormalBlending",
+        "vertexColors": false,
+        "emissive": 0,
+        "name": "Material.001",
+        "type": "MeshLambertMaterial",
+        "ambient": 13421772,
+        "depthTest": true,
+        "uuid": "109C8DEC-623D-3F38-8AFD-395BEC6741C8",
+        "depthWrite": true
+    },{
+        "color": 13421772,
+        "blending": "NormalBlending",
+        "vertexColors": false,
+        "emissive": 0,
+        "name": "Material.002",
+        "type": "MeshLambertMaterial",
+        "ambient": 13421772,
+        "depthTest": true,
+        "uuid": "9D8A2545-F1EB-3251-B63F-BA16B4AD0604",
+        "depthWrite": true
     }]
 }

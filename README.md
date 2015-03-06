@@ -6,13 +6,9 @@ Specifically, this workflow tests to see if Three.js and Blender can be used to 
 
 ## About the demo
 
-[Try in now](http://willy-vvu.github.io/DankMemesDemo/Step%204/) in the browser! Use the arrow keys to move. If you're faced with a black screen, things are loading. Just hang tight.
+[Try in now](http://willy-vvu.github.io/DankMemesDemo/Step%204/) in the browser! Use the arrow keys to move.
 
-A few things I hoped to get working but decided not to:
-
-1. Clean animations. During the walking and landing animation, there is some strange scaling and moving that occurs. I'm not sure what's causing this, but oh well.
-2. Flapping wings. The Three.js exporter I used doesn't export changes in scale.
-3. Wind animation. The Three.js animation system does not support multiple additive animations playing at once.
+During the walking and landing animation, there is some strange scaling and moving that occurs. I'm not sure what's causing this, but oh well.
 
 ## Step 1 - Art
 
