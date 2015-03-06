@@ -204,7 +204,9 @@
             # Let's get physical
             lastTouchingGround = aurora.position.y < 0.01
             
-            targetVel = tempVector.copy(joystick).multiplyScalar(if lastTouchingGround then 0.15 else 0.25)
+            targetVel = tempVector.copy(joystick)
+            targetVel.x *= (if lastTouchingGround then 0.15 else 0.25)
+            targetVel.y *= 0.25
             velocity.lerp(targetVel, 0.1)
             aurora.position.add(velocity)
             aurora.position.x = Math.min(Math.max(aurora.position.x, -11), 11)
