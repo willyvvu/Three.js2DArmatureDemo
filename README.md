@@ -1,4 +1,4 @@
-# DankMemesDemo
+# Three.js2DArmatureDemo
 
 A quick example workflow of using 2D art assets in Three.js.
 
@@ -6,7 +6,7 @@ Specifically, this workflow tests to see if Three.js and Blender can be used to 
 
 ## About the demo
 
-[Try in now](http://willy-vvu.github.io/DankMemesDemo/Step%204/) in the browser! Use the arrow keys to move.
+[Try in now](http://willy-vvu.github.io/Three.js2DArmatureDemo/Step%204/) in the browser! Use the arrow keys to move.
 
 During the walking and landing animation, there is some strange scaling and moving that occurs. I'm not sure what's causing this, but oh well.
 
