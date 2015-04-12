@@ -12,7 +12,9 @@ During the walking and landing animation, there is some strange scaling and movi
 
 ## Step 1 - Art
 
-The process starts with 2D art assets. I've filled the Step 1 folder with the reference material I used. The images can come in any source: drawn on a graphics tablet, photographs of real-world art, or in my case, screenshots.
+The process starts with 2D art assets. I've filled the Step 1 folder with the reference material I used. The images can come in any source: drawn on a graphics tablet, photographs of real-world art.
+
+*Disclaimer/Acknowledgement:* The reference art I used is absolutely wonderful, but it's not mine. I used screenshots from the game *Child of Light*. I only intend the art to be used for the purpose of demonstration.
 
 ## Step 2 - Slicing and Texture packing
 
